@@ -13,9 +13,9 @@ or any other width.
 | Name | Register No | Roll No |
 |---|---|---|
 | Muhammed Mashhood K | WYD25EC085 | 36 |
+| Muhammed Sinan E | WYD25EC088 | 37 |
 | Nasbil K | WYD25EC092 | 38 |
 | Neha Biju | WYD25EC094 | 39 |
-| Muhammed Sinan E | WYD25EC088 | 37 |
 | Nevil KJ | WYD25EC095 | 40 |
 
 ## Files
