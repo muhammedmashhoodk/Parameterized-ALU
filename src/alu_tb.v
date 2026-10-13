@@ -21,9 +21,16 @@ module alu_full_tb;
     integer i, op;
 
     alu #(.WIDTH(WIDTH)) dut (
-        .a(a), .b(b), .opcode(opcode),
-        .result(result), .carry_borrow(carry_borrow), .overflow(overflow),
-        .zero(zero), .equal(equal), .greater(greater), .less(less)
+        .a(a), 
+        .b(b), 
+        .opcode(opcode),
+        .result(result), 
+        .carry_borrow(carry_borrow), 
+        .overflow(overflow),
+        .zero(zero), 
+        .equal(equal), 
+        .greater(greater), 
+        .less(less)
     );
 
     // ---- reference shifts: move one bit at a time, at most WIDTH times ----
