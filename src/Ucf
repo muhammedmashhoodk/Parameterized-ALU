@@ -1,0 +1,34 @@
+# XILINX SPARTAN-6 PIN CONSTRAINTS FOR XC6SLX16-CSG324
+# -----------------------------------------------------------------
+# INPUT SLIDE SWITCHES
+# -----------------------------------------------------------------
+# Operand A
+NET "a[0]" LOC = "T10" | IOSTANDARD = LVCMOS33; # SWA (Rightmost)
+NET "a[1]" LOC = "T9"  | IOSTANDARD = LVCMOS33; # SW1
+
+# Operand B
+NET "b[0]" LOC = "V9"  | IOSTANDARD = LVCMOS33; # SW2
+NET "b[1]" LOC = "M8"  | IOSTANDARD = LVCMOS33; # SW3 (Corrected MB to M8)
+
+# Operation Control Opcode
+NET "opcode[0]" LOC = "N8" | IOSTANDARD = LVCMOS33; # SW4
+NET "opcode[1]" LOC = "U8" | IOSTANDARD = LVCMOS33; # SW5
+NET "opcode[2]" LOC = "V8" | IOSTANDARD = LVCMOS33; # SW6
+NET "opcode[3]" LOC = "T5" | IOSTANDARD = LVCMOS33; # SW7 (Leftmost)
+
+# -----------------------------------------------------------------
+# OUTPUT LED INDICATORS
+# -----------------------------------------------------------------
+# ALU Math Outputs
+NET "result[0]" LOC = "U16" | IOSTANDARD = LVCMOS33; # LD0 (Rightmost)
+NET "result[1]" LOC = "V16" | IOSTANDARD = LVCMOS33; # LD1
+
+# Arithmetic Hardware Flags
+NET "carry_borrow" LOC = "U15" | IOSTANDARD = LVCMOS33; # LD2
+NET "overflow"     LOC = "V15" | IOSTANDARD = LVCMOS33; # LD3
+NET "zero"         LOC = "M11" | IOSTANDARD = LVCMOS33; # LD4
+
+# Conditional Relational Flags
+NET "equal"   LOC = "N11" | IOSTANDARD = LVCMOS33; # LD5 
+NET "greater" LOC = "R11" | IOSTANDARD = LVCMOS33; # LD6 
+NET "less"    LOC = "T11" | IOSTANDARD = LVCMOS33; # LD7 (Leftmost)
