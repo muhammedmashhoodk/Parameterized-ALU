@@ -1,0 +1,52 @@
+## =================================================================
+## alu_display_nexys3.ucf   (ISE / Spartan-6, XC6SLX16-CSG324)
+## Pin map for the Digilent Nexys 3 board.
+## !! Check every LOC against YOUR board's reference manual before
+## !! programming. If your board is not a Nexys 3, only these LOC
+## !! lines change - the Verilog stays the same.
+## =================================================================
+
+## ---- 100 MHz clock ----
+NET "clk"     LOC = "V10" | IOSTANDARD = LVCMOS33;
+NET "clk"     TNM_NET = "clk_grp";
+TIMESPEC "TS_clk" = PERIOD "clk_grp" 10 ns HIGH 50%;
+
+## ---- Slide switches: sw<3:0> = A, sw<7:4> = B ----
+NET "sw<0>"   LOC = "T10" | IOSTANDARD = LVCMOS33;
+NET "sw<1>"   LOC = "T9"  | IOSTANDARD = LVCMOS33;
+NET "sw<2>"   LOC = "V9"  | IOSTANDARD = LVCMOS33;
+NET "sw<3>"   LOC = "M8"  | IOSTANDARD = LVCMOS33;
+NET "sw<4>"   LOC = "N8"  | IOSTANDARD = LVCMOS33;
+NET "sw<5>"   LOC = "U8"  | IOSTANDARD = LVCMOS33;
+NET "sw<6>"   LOC = "V8"  | IOSTANDARD = LVCMOS33;
+NET "sw<7>"   LOC = "T5"  | IOSTANDARD = LVCMOS33;
+
+## ---- Push buttons: Up = ADD, Down = SUB ----
+NET "btnU"    LOC = "A8"  | IOSTANDARD = LVCMOS33;
+NET "btnD"    LOC = "C9"  | IOSTANDARD = LVCMOS33;
+
+## ---- Seven-segment display (common anode, active LOW) ----
+NET "seg<0>"  LOC = "T17" | IOSTANDARD = LVCMOS33;   # segment a
+NET "seg<1>"  LOC = "T18" | IOSTANDARD = LVCMOS33;   # segment b
+NET "seg<2>"  LOC = "U17" | IOSTANDARD = LVCMOS33;   # segment c
+NET "seg<3>"  LOC = "U18" | IOSTANDARD = LVCMOS33;   # segment d
+NET "seg<4>"  LOC = "M14" | IOSTANDARD = LVCMOS33;   # segment e
+NET "seg<5>"  LOC = "N14" | IOSTANDARD = LVCMOS33;   # segment f
+NET "seg<6>"  LOC = "L14" | IOSTANDARD = LVCMOS33;   # segment g
+NET "dp"      LOC = "M13" | IOSTANDARD = LVCMOS33;   # decimal point
+
+## ---- Digit enables: an<0> is the RIGHT-most digit ----
+NET "an<0>"   LOC = "N16" | IOSTANDARD = LVCMOS33;
+NET "an<1>"   LOC = "N15" | IOSTANDARD = LVCMOS33;
+NET "an<2>"   LOC = "P18" | IOSTANDARD = LVCMOS33;
+NET "an<3>"   LOC = "P17" | IOSTANDARD = LVCMOS33;
+
+## ---- LEDs: LD0 ADD, LD1 SUB, LD2 negative, LD7..LD3 raw 5-bit result ----
+NET "led<0>"  LOC = "U16" | IOSTANDARD = LVCMOS33;
+NET "led<1>"  LOC = "V16" | IOSTANDARD = LVCMOS33;
+NET "led<2>"  LOC = "U15" | IOSTANDARD = LVCMOS33;
+NET "led<3>"  LOC = "V15" | IOSTANDARD = LVCMOS33;
+NET "led<4>"  LOC = "M11" | IOSTANDARD = LVCMOS33;
+NET "led<5>"  LOC = "N11" | IOSTANDARD = LVCMOS33;
+NET "led<6>"  LOC = "R11" | IOSTANDARD = LVCMOS33;
+NET "led<7>"  LOC = "T11" | IOSTANDARD = LVCMOS33;
